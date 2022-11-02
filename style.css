@@ -1,0 +1,42 @@
+.dictionary-content {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.input-word {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.succes-submited-message {
+    display: none;
+}
+
+.danger-submited-message {
+    display: none;
+}
+
+.buttons-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons-content button {
+    flex-grow: 1;
+}
+
+.succes-alert-message {
+    display: block;
+}
+
+.text-message-content {
+    margin-top: 10px;
+}
