@@ -1,10 +1,10 @@
 let addWordBtn = document.getElementById("add-word");
 let searchWordBtn = document.getElementById("search-word");
+let inputElement = document.getElementById("word");
+let word = inputElement.value;
 let listOfWords = [];
 
 addWordBtn.addEventListener('click', function () {
-    let inputElement = document.getElementById("word");
-    let word = inputElement.value;
     if (inputElement.value !== "") {
         let messageElement = document.getElementsByClassName("succes-submited-message");
         if (!messageElement[0].classList.contains("succes-alert-message")) {
@@ -30,8 +30,6 @@ addWordBtn.addEventListener('click', function () {
 });
 
 searchWordBtn.addEventListener('click', function () {
-    let inputElement = document.getElementById("word");
-    let word = inputElement.value;
     word.toLowerCase();
     let exists = false;
     listOfWords.forEach(function (item) {
