@@ -4,28 +4,25 @@ let inputElement = document.getElementById("word");
 let word = inputElement.value;
 let listOfWords = [];
 
+function messageAlert(messageElement) {
+    if (!messageElement[0].classList.contains("succes-alert-message")) {
+        messageElement[0].style.display = "block";
+        setTimeout(function () {
+            messageElement[0].style.display = "none";
+        }, 1000);
+    } else {
+        messageElement[0].style.display = "none";
+    }
+}
+
 addWordBtn.addEventListener('click', function () {
     if (inputElement.value !== "") {
         let messageElement = document.getElementsByClassName("succes-submited-message");
-        if (!messageElement[0].classList.contains("succes-alert-message")) {
-            messageElement[0].style.display = "block";
-            setTimeout(function () {
-                messageElement[0].style.display = "none";
-            }, 1000);
-        } else {
-            messageElement[0].style.display = "none";
-        }
+        messageAlert(messageElement);
         listOfWords.push(word);
     } else {
         let messageElement = document.getElementsByClassName("danger-submited-message");
-        if (!messageElement[0].classList.contains("succes-alert-message")) {
-            messageElement[0].style.display = "block";
-            setTimeout(function () {
-                messageElement[0].style.display = "none";
-            }, 1000);
-        } else {
-            messageElement[0].style.display = "none";
-        }
+        messageAlert(messageElement);
     }
 });
 
